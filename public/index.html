@@ -1,0 +1,72 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expense Tracker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="wrap">
+      <h1>Expense Tracker</h1>
+      <p>Each submit adds one expense row to your Excel table.</p>
+
+      <section class="stats">
+        <article class="stat-card">
+          <h2>الرصيد</h2>
+          <p id="balance-value" class="stat-value">...</p>
+        </article>
+        <article class="stat-card">
+          <h2>مصاريف الشهر</h2>
+          <p id="month-expense-value" class="stat-value">...</p>
+        </article>
+      </section>
+
+      <section class="card history-card">
+        <h2>Last 5 Rows</h2>
+        <div class="table-wrap">
+          <table id="last-rows-table">
+            <thead></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </section>
+
+      <form id="submit-form" class="card">
+        <label>
+          Date
+          <input type="date" name="date" required />
+        </label>
+
+        <label>
+          Expense
+          <select name="expense" id="expense" required></select>
+        </label>
+
+        <label>
+          Subexpense
+          <select name="subexpense" id="subexpense" required></select>
+        </label>
+
+        <label>
+          Amount
+          <input type="number" name="amount" min="0" step="0.01" placeholder="0.00" required />
+        </label>
+
+        <label>
+          Note
+          <textarea name="note" rows="4"></textarea>
+        </label>
+
+        <button id="submit-btn" type="submit">Submit Expense</button>
+      </form>
+
+      <p id="status" class="status"></p>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
