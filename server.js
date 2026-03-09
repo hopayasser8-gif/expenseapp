@@ -156,7 +156,7 @@ async function getDashboardData() {
     ? columnsPayload.value.map((column) => String(column.name || ""))
     : [];
   const rowValues = Array.isArray(rowsPayload?.value) ? rowsPayload.value : [];
-  const last5 = rowValues.slice(-5).reverse();
+  const last5 = rowValues.slice(-5);
 
   const rows = last5.map((row) => {
     const values = Array.isArray(row?.values?.[0]) ? row.values[0] : [];

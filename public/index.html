@@ -14,25 +14,16 @@
       <h1>Expense Tracker</h1>
       <p>Each submit adds one expense row to your Excel table.</p>
 
-      <section class="stats">
-        <article class="stat-card">
+      <section class="summary-strip">
+        <article class="summary-item">
           <h2>الرصيد</h2>
           <p id="balance-value" class="stat-value">...</p>
         </article>
-        <article class="stat-card">
+        <div class="summary-divider" aria-hidden="true"></div>
+        <article class="summary-item">
           <h2>مصاريف الشهر</h2>
           <p id="month-expense-value" class="stat-value">...</p>
         </article>
-      </section>
-
-      <section class="card history-card">
-        <h2>Last 5 Rows</h2>
-        <div class="table-wrap">
-          <table id="last-rows-table">
-            <thead></thead>
-            <tbody></tbody>
-          </table>
-        </div>
       </section>
 
       <form id="submit-form" class="card">
@@ -63,6 +54,16 @@
 
         <button id="submit-btn" type="submit">Submit Expense</button>
       </form>
+
+      <section class="card history-card">
+        <h2>Last 5 Rows</h2>
+        <div class="table-wrap">
+          <table id="last-rows-table">
+            <thead></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </section>
 
       <p id="status" class="status"></p>
     </main>
